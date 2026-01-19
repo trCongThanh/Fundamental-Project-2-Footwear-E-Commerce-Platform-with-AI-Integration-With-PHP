@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Masking and Cropping</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styleimgCutter.css">
+</head>
+
+<body>
+    <div class="image-cutter-app">
+        <!-- Button to Open Modal -->
+        <button class="btn btn-open-cutter" data-toggle="modal" data-target="#cutterModal">
+            <i class="fas fa-cut"></i> Open Cutter
+        </button>
+
+        <!-- Modal for Image Cutter -->
+        <div class="modal fade" id="cutterModal" tabindex="-1" role="dialog" aria-labelledby="cutterModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cutterModalLabel">Align and Crop Image</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="colorPicker">
+                            <h2>Select a Color</h2>
+                            <input type="color" id="colorPicker" value="#ff0000">
+                        </div>
+                        <input type="file" id="imageUpload" accept="image/*" class="mb-3">
+                        <div id="canvasWrapper">
+                            <img src="img/1.png" id="originImage" alt="Origin Image">
+                            <img id="uploadedImage" alt="Uploaded Image" draggable="false" style="display: none;">
+                        </div>
+                        <div class="controls">
+                            <button id="cropButton" class="btn btn-primary mt-3">Upload new color</button>
+                            <div class="move-buttons mt-2">
+                                <button id="moveLeft" class="btn btn-secondary">Left</button>
+                                <button id="moveRight" class="btn btn-secondary">Right</button>
+                                <button id="moveUp" class="btn btn-secondary">Up</button>
+                                <button id="moveDown" class="btn btn-secondary">Down</button>
+                            </div>
+                            <div class="resize-buttons mt-2">
+                                <button id="increaseWidth" class="btn btn-secondary">Widen</button>
+                                <button id="decreaseWidth" class="btn btn-secondary">Narrow</button>
+                                <button id="increaseHeight" class="btn btn-secondary">Heighten</button>
+                                <button id="decreaseHeight" class="btn btn-secondary">Shorten</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="scriptimgCutter.js?v=<?php echo time(); ?>"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        const colorDisplay = document.getElementById('colorDisplay');
+
+        // Set initial color display
+        colorDisplay.style.backgroundColor = colorPicker.value;
+
+        // Event listener for color change
+        colorPicker.addEventListener('input', function() {
+            colorDisplay.style.backgroundColor = colorPicker.value;
+        });
+    </script>
+</body>
+
+</html>

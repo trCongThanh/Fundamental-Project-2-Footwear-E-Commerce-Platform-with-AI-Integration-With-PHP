@@ -1,0 +1,79 @@
+.image-cutter-app {
+    font-family: Arial, sans-serif;
+    background-color: #f1f0f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-cutter-app .btn-open-cutter {
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.image-cutter-app .btn-open-cutter:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-cutter-app .modal-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-cutter-app #canvasWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+}
+
+.image-cutter-app #originImage {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 1080;
+}
+
+.image-cutter-app #uploadedImage {
+    position: absolute;
+    cursor: move;
+    transform-origin: top left;
+}
+
+.image-cutter-app .controls {
+    margin-top: 20px;
+}
+
+.image-cutter-app .move-buttons,
+.image-cutter-app .resize-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.image-cutter-app .colorPicker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 10vh;
+    font-family: Arial, sans-serif;
+}
