@@ -1,5 +1,6 @@
 # Fundamental-Project-2-Footwear-E-Commerce-Platform-with-AI-Integration-With-PHP
 A comprehensive web-based shoe store built using Vanilla PHP and MySQL. This project features a full e-commerce workflow, an administrative management system, and an AI-powered Chatbot to enhance user experience.
+
 🌟 Key Features :
 
 🛒 Customer Side
