@@ -1,0 +1,122 @@
+/* Modal Styles */
+.brads-modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark semi-transparent background */
+}
+
+/* Modal Content */
+.brads-modal-content {
+    background-color: #1c1c1c;
+    color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    border: none;
+}
+.brads-modal-content h5 {
+    color: #fff;
+}
+/* Close Button */
+.brads-close {
+    color: #ccc;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.brads-close:hover,
+.brads-close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Grid layout */
+.brads-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* Image box with background image */
+.brads-image-box {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    /* Adjust height to fit the grid */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text overlay */
+.brads-image-box span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    /* Text shadow for better visibility */
+}
+
+/* Selection effect */
+.brads-image-box.selected {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 0, 0.8);
+    /* Glowing border effect */
+}
+
+.brads-image-box:hover {
+    transform: scale(1.03);
+    /* Slight hover effect */
+}
+
+/* Button */
+.brads-btn {
+    background-color: #fff;
+    color: #1c1c1c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.brads-btn:hover {
+    background-color: #ddd;
+}
+
+.brads-btn:focus {
+    outline: none;
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+    .brads-modal-content {
+        width: 70%;
+    }
+}
+
+@media (min-width: 900px) {
+    .brads-modal-content {
+        width: 50%;
+    }
+}

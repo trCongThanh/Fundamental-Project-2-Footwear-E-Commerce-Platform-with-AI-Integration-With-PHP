@@ -1,0 +1,77 @@
+
+.product {
+    width: 100%;
+    max-width: 26rem;
+    height: 14rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+}
+
+.product:hover {
+    background-color: var(--dynamic-color);
+}
+
+.product img {
+    position: relative;
+    width: 70%;
+    height: auto;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.product:hover img {
+    transform: scale(1.2) rotate(-25deg);
+}
+
+.circle {
+    width: 9em;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: var(--dynamic-color);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
+    z-index: 0;
+}
+
+.product:hover .circle {
+    background-color: white;
+}
+
+.product h4 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    z-index: 2;
+    transition: font-size 0.3s ease;
+}
+
+.product:hover h4 {
+    transform: translateY(-3.5rem) translateX(-4.5rem) rotate(-25deg);
+    font-size: 1.1rem;
+    color: transparent;
+    text-shadow: none;
+}
+
+@media (max-width: 576px) {
+    .product h4 {
+        padding-bottom: 4rem;
+    }
+
+    .product img {
+        width: 50%;
+        height: auto;
+    }
+}
