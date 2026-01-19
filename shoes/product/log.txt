@@ -1,0 +1,26 @@
+Array
+(
+    [idproduct] => 1
+    [idcart] => 1
+    [quantity] => 2
+    [color] => purple
+    [size] => 7
+)
+SQL: INSERT INTO carthasproduct (idCart, idProduct, quantity, color) 
+            VALUES ('1', '1', '1', 'purple')
+Array
+(
+    [idproduct] => 1
+    [idcart] => 1
+    [quantity] => 1
+    [color] => purple
+    [size] => 7
+)
+Array
+(
+    [idproduct] => 1
+    [idcart] => 1
+    [quantity] => 2
+    [color] => purple
+    [size] => 7
+)
